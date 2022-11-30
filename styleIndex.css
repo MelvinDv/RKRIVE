@@ -15,15 +15,7 @@ body {
 
 header {
   display: flex;
-  justify-content: center;
-}
-
-header h1 {
-  font-family: 'Bodoni FLF';
-  font-size: 45px;
-  margin: 0;
-  padding: 10px 0px;
-  display: flex;
+  flex-wrap: wrap;
 }
 
 #navbar {
@@ -48,29 +40,4 @@ header h1 {
 
 #navbar a:hover {
   background: #F0DBDB;
-}
-
-.search {
-  justify-content: center;
-  display: flex;
-}
-
-.search-container {
-  padding: 15px 0px;
-  display: flex;
-}
-
-.search-container input {
-  padding: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  color: black;
-  border: 0px;
-  background-color: #F0DBDB;
-}
-
-.search-container button {
-  margin: 2px;
-  border: none;
-  cursor: pointer;
 }

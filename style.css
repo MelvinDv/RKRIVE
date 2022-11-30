@@ -15,10 +15,18 @@ body {
 
 header {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#navbar {
+header h1 {
+  font-family: 'Bodoni FLF';
+  font-size: 45px;
+  margin: 0;
+  padding: 10px 0px;
+  display: flex;
+}
+
+.navbar {
   padding: 0;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
@@ -30,7 +38,7 @@ header {
   justify-content: space-between;
 }
 
-#navbar a {
+.navbar a {
   padding: 16px;
   text-decoration: none;
   display: block;
@@ -38,6 +46,31 @@ header {
   font-weight: bold;
 }
 
-#navbar a:hover {
+.navbar a:hover {
   background: #F0DBDB;
+}
+
+.search {
+  justify-content: center;
+  display: flex;
+}
+
+.search-container {
+  padding: 15px 0px;
+  display: flex;
+}
+
+.search-container input {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  border: 0px;
+  background-color: #F0DBDB;
+}
+
+.search-container button {
+  margin: 2px;
+  border: none;
+  cursor: pointer;
 }

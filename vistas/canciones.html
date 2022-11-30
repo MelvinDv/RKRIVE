@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styleCanciones.css" type="text/css">
+    <link rel="stylesheet" href="../style.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>RKRIVE - Canciones</title>
@@ -14,7 +14,7 @@
         <h1>Canciones</h1>
       </header>
       <section>
-        <ul id="navbar">
+        <ul class="navbar">
           <li><a href="index.html">¿Quiénes somos?</a></li>
           <li><a href="canciones.html">Canciones</a></li>
           <li><a href="artistas.html">Artistas</a></li>
@@ -23,9 +23,9 @@
         </ul>
       </section>
       <div class="search">
-        <form name="formulario" class="search-container" method="post">
-          <input id="cancion" type="search" name="buscador" placeholder="Busca una canción">
-          <button type="submit">
+        <form name="formulario" class="search-container" role="search">
+          <input id="buscador" type="text" name="buscador" placeholder="Busca una canción">
+          <button id="buscar" type="button">
             <span class="material-symbols-outlined">
               search
             </span>
