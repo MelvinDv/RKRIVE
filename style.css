@@ -1,0 +1,43 @@
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #eef4ed;
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#navbar {
+  padding: 0;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  list-style: none;
+  margin: 0;
+  background-color; white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+#navbar a {
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  color: black;
+  font-weight: bold;
+}
+
+#navbar a:hover {
+  background: #F0DBDB;
+}
