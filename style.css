@@ -74,3 +74,29 @@ header h1 {
   border: none;
   cursor: pointer;
 }
+
+#anuncio{
+  width: 500px;
+  height: 50px;
+  margin: 0 auto;
+}
+.invisible{
+  display: none;
+
+}
+
+.wrap_result ul{
+  list-style: none;
+  display: inline-flex;
+}
+
+.wrap_result li{
+  border-radius: 10px 10px 0 0;
+  border: solid;
+  border-color: black;
+  list-style: none;
+  width: 250px;
+  height: 500px;
+  text-align: center;
+  padding: 10px;
+}
