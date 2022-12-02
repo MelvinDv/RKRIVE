@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Montserrat:wght@200&display=swap');
+
 *{
   font-family: 'Open Sans', sans-serif;
 }
@@ -14,23 +16,33 @@ body {
 }
 
 header {
+  margin: 0;
+  padding: 0;
+  height: auto;
   display: flex;
-  flex-wrap: wrap;
 }
 
-#navbar {
+header img {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.navbar {
   padding: 0;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   list-style: none;
   margin: 0;
-  background-color; white;
+  background-color: #eef4ed;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
-#navbar a {
+.navbar a {
   padding: 16px;
   text-decoration: none;
   display: block;
@@ -38,6 +50,94 @@ header {
   font-weight: bold;
 }
 
-#navbar a:hover {
+.navbar a:hover {
   background: #F0DBDB;
+}
+
+section {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+section #nick {
+  font-size: 20px;
+  margin: 0;
+  margin-top: 45px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+section h1 {
+  letter-spacing: 10px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  font-family: 'Bodoni Moda', serif;
+  font-size: 48px;
+}
+
+section #desc {
+  margin: auto;
+  margin-top: 15px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  text-align: justify;
+  line-height: 25px;
+}
+
+
+
+/*----------RESPONSIVE-----------*/
+@media all and (max-width: 800px) {
+  header img{
+    width: 100%;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  section {
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  section #desc{
+    width: auto;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 600px) {
+  header img {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-flow: column wrap;
+    padding: 0;
+    width: 100%;
+  }
+
+  section {
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  section #desc{
+    width: auto;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+  }
 }

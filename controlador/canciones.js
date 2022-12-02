@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 
   /* ----- funcion de optener cancion -----*/
@@ -7,13 +5,18 @@ $(document).ready(function(){
 
     var song = $("#buscador").val();
 
-    //validamos que no este basia la busqueda
+    //validamos que no este vacia la busqueda
     if (song == '') {
 
-      $("#anuncio").toggleClass("invisible",false);
-      $("#anuncio").html("<h1>No se encontro ningun resultado</h1>")
+      $("#anuncio").html("<h1>No se encontró ningún resultado</h1>")
 
     } else {
+
+      if($(".wrap_result").html("")) {
+
+      } else {
+        $(".wrap_result").html("");
+      }
 
       const settings = {
         "async": true,
@@ -27,25 +30,22 @@ $(document).ready(function(){
       };
       $.ajax(settings).done(function (response) {
         console.log(response);
-        
+        $("#buscador").val("");
         if (response.count =! 0) {
           
-          $("#anuncio").toggleClass("invisible", false);
-          $("#anuncio").html("<h1>Esto fue lo que encontramos</h1>")
+          $("#anuncio").html("<h1></h1>");   
 
           $.each(response.data, function(indice, contenido){
             console.log(contenido);
-            $(".wrap_result").append('<ul><li><h1>'+contenido["Song Name"]+'</h1><h1>'+contenido["Korean Name"]+'</h1><h2>Artista: '+contenido.Artist+'</h2><p>Director: '+contenido.Director+'</p><small>Fecha: '+contenido.Date+'</small><video src="'+contenido.Video+'" width="100px" height="100px" poster="'+contenido.Video+'" autoplay="true"></video></li></ul>');
+            $(".wrap_result").append('<ul><li><h1>'+contenido["Song Name"]+'</h1><h2>'+contenido["Korean Name"]+'</h2><h2>By: '+contenido.Artist+'</h2><p>Director: '+contenido.Director+'</p> <p>Fecha: '+contenido.Date+'</p></li></ul>');
           });
         
+        } else {
+          $("#anuncio").html("<h1>No se encontró ningún resultado</h1>");
         }
-
-      
-
-
+ 
       });
 
-      
     }
   }
 
@@ -58,9 +58,5 @@ $(document).ready(function(){
       getSong();
     }
   })
-
-
-
-
 
 });

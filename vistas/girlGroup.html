@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="../style.css" type="text/css">
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>RKRIVE - Girl group</title>
+    <title>RKRIVE - Girl Group</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Girl group</h1>
+        <h1>Girl Group</h1>
       </header>
-      <section>
+      <nav>
         <ul class="navbar">
           <li><a href="index.html">¿Quiénes somos?</a></li>
           <li><a href="canciones.html">Canciones</a></li>
@@ -21,16 +21,19 @@
           <li><a href="boyGroup.html">Boy group</a></li>
           <li><a href="girlGroup.html">Girl group</a></li>
         </ul>
-      </section>
+      </nav>
       <div class="search">
-        <form name="formulario" class="search-container" method="post">
-          <input id="cancion" type="search" name="buscador" placeholder="Busca una girl group">
-          <button type="submit">
+        <form name="formulario" class="search-container" role="search">
+          <input id="buscador" type="text" name="buscador" placeholder="Busca un girl group">
+          <button id="buscar" type="button">
             <span class="material-symbols-outlined">
               search
             </span>
           </button>
         </form>
+      </div>
+      <div id="anuncio" class="invisible">
+        <h1></h1>
       </div>
       <div class="wrap_result"></div>
       <script src="../controlador\girlGroup.js" type="module"></script>
